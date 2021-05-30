@@ -1,5 +1,5 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-Network Joint Independent Componnet Analysis (NJICA)
+Network Joint Independent Componet Analysis (NJICA)
 
 ## Table of Contents
 - [Table of Contents](#table-of-contents)
@@ -18,12 +18,12 @@ The network emulation is based on the **[comnetsemu](https://git.comnets.net/pub
 Please install `vagrant` and `Virtualbox` on the host OS to build the emulator.
 
 ```
-The source code will be made open source upon acceptance of the paper, in accordance with the confidentiality guidelines of the research institution.
+The source code will be made open-source upon acceptance of the paper, in accordance with the confidentiality guidelines of the research institution.
 ```
 
 ## Getting Started
 
-Please run follow steps to setup the emulator.
+Please run the following steps to set up the emulator.
 
 ## Run NJICA in the Emulator
 Run the multi-hop network emulation script with compute-and-forward/store-and-forward mode.
