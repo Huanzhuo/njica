@@ -34,6 +34,6 @@ Run the multi-hop network emulation script with compute-and-forward/store-and-fo
 We are researchers at the Deutsche Telekom Chair of Communication Networks (ComNets) at TU Dresden, Germany. Please feel free to contact us with any questions you may have.
 
 * **Huanzhuo Wu** - huanzhuo.wu@tu-dresden.de or wuhuanzhuo@gmail.com
-* **Zuo Xiang** - zuo.xiang@tu-dresden.de or 
+* **Zuo Xiang** - zuo.xiang@tu-dresden.de 
 * **Yunbin Shen** - yunbin.shen@mailbox.tu-dresden.de or shenyunbin@outlook.com
 
