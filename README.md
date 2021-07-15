@@ -9,6 +9,7 @@ Network Joint Independent Componet Analysis (NJICA)
 - [Run NJICA in the Emulator](#run-njica-in-the-emulator)
 - [Citation](#citation)
 - [About Us](#about-us)
+- [Todo](#todo)
 
 ## Description
 
@@ -85,11 +86,11 @@ Assume the source directory of `njica` project is `~/njica`.
 3. Run the multi-hop network emulation script with store and forward mode.
 
     ```bash
+    cd /vagrant/emulation
     sudo ./topology.py
     ```
 
-    Now you should see the pop-up window for logs of the Ryu SDN controller running the application `./multi_hop_controller.py`.
-    And you should also see the prompt `mininet>` when the network configuration is finished.
+    Now you should also see the prompt `mininet>` when the network configuration is finished.
     If you check the CPU usage inside the VM using `htop`, three VNF processes are heavily using the second CPU core (Because they are based on DPDK with polling mode).
 
 4. Run server and client programs inside the corresponded container.
@@ -100,15 +101,14 @@ Assume the source directory of `njica` project is `~/njica`.
 
     Then two windows are popped up, you can identify the client and server by looking at the host name (e.g. `@client`) in the shell.
 
-    Then please firstly run `server.py` inside the server's shell and then `client.py` in the clients shell (use `-h` to check the CLI options). (Currently, this order must
-    be kept manually.)
+    Then please firstly run `server.py` inside the server's shell and then `client.py` in the clients shell (use `-h` to check the CLI options). (Currently, this order must be kept manually.)
 
     Run server and client with the default options:
 
     ```python
-    root@server# python ./server.py
+    root@server# python3 ./server.py
 
-    root@client# python ./client.py
+    root@client# python3 ./client.py
     ``` 
 
 ## Citation
@@ -121,3 +121,9 @@ We are researchers at the Deutsche Telekom Chair of Communication Networks (ComN
 * **Zuo Xiang** - zuo.xiang@tu-dresden.de 
 * **Yunbin Shen** - yunbin.shen@mailbox.tu-dresden.de or shenyunbin@outlook.com
 
+## Todo
+1. Error by starting network ``` sudo ./topology.py```:
+   ```bash
+   xrdb: Can't open display ''
+   ```
+2. Error by ```client.py```, it might be because controller can not be started.

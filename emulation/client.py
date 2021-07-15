@@ -45,7 +45,7 @@ class Client(meica_host.MEICAHost):
             self.logger = meica_host.get_logger("info")
 
     def generate_data(self, wav_range, source_number):
-        folder_address = "./google_dataset/32000_wav_factory"
+        folder_address = "/in-network_bss/google_dataset/32000_wav_factory"
         # Use the fixed combination of source files which only depends on
         # source_number.
         _, _, X = pyfbss_tb.generate_matrix_S_A_X_fixed_sources(
