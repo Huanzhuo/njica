@@ -34,30 +34,27 @@ Assume the source directory of `njica` project is `~/njica`.
 
     Then run `vagrant ssh testbed` to login into the VM. Following steps should be run **inside the VM**.
 
-<!-- 2. Install `docker-ce` and add docker into user group
+2. Install `docker-ce` and add docker into user group
     ```bash
-    sudo apt-get update
-    sudo apt-get install  apt-transport-https  ca-certificates curl  software-properties-common
-    curl -fsSL  https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add
-    sudo add-apt-repository "deb [arch=amd64]  https://download.docker.com/linux/ubuntu bionic stable" 
-    sudo apt-get update
-    sudo apt-get install docker-ce
+    cd ~/comnetsemu/util
+    bash ./install.sh -d
 
     sudo groupadd docker
     sudo gpasswd -a vagrant docker
     newgrp docker
-
+    sudo systemctl start docker
+    
     cd /home/vagrant/comnetsemu/test_containers || exit
     sudo bash ./build.sh
-    ``` -->
+    ```
 
-2. Upgrade ComNetsEmu Python module and all dependencies automatically inside VM
+3. Upgrade ComNetsEmu Python module and all dependencies automatically inside VM
     ```bash
     cd ~/comnetsemu/util
     bash ./install.sh -u
     ```
 
-3. Run test to make sure the `ComNetsEmu` is installed correctly (optional).
+4. Run test to make sure the `ComNetsEmu` is installed correctly (optional).
     ```bash
     cd ~/comnetsemu
     sudo make test
